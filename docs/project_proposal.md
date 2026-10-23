@@ -38,6 +38,7 @@ Een CSV-bestand met een overzicht van de verschillende KPI-events die binnen a.s
 
 ## Project Objectives
 What will your data pipeline accomplish?
+
 **Primary Goal**:
 - Een prototype ontwerpen, ontwikkelen en evalueren voor de geautomatiseerde validatie en monitoring van de datakwaliteit van Tealium-eventdata in Azure.
 
