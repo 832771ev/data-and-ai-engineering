@@ -27,11 +27,11 @@ Online bezoekersdata die via Tealium Tag Management wordt verzameld en via Teali
 2. **Secondary Source**: [e.g., External market data API]
 Een CSV-bestand met een overzicht van de verschillende KPI-events die binnen a.s.r. worden gehanteerd, inclusief de mogelijke parameters per event. Dit bestand dient als referentie voor de validatieregels van het prototype. Voor iedere parameter is vastgelegd welke aanwezigheidseis van toepassing is:
 
-**Mandatory**: De parameter moet aanwezig zijn en een niet-lege waarde bevatten. Wanneer niet aan deze eis wordt voldaan, wordt het event als ongeldig aangemerkt.
+- **Mandatory**: De parameter moet aanwezig zijn en een niet-lege waarde bevatten. Wanneer niet aan deze eis wordt voldaan, wordt het event als ongeldig aangemerkt.
 
-**Expected**: De parameter wordt verwacht, maar het ontbreken ervan mag niet leiden tot uitsluiting van het event. Het ontbreken wordt wel geregistreerd als een datakwaliteitsprobleem.
+- **Expected**: De parameter wordt verwacht, maar het ontbreken ervan mag niet leiden tot uitsluiting van het event. Het ontbreken wordt wel geregistreerd als een datakwaliteitsprobleem.
 
-**Optional**: De parameter mag ontbreken. Wanneer de parameter aanwezig is, kan de waarde aanvullend worden gevalideerd. Dit laten we in deze opdracht buiten beschouwing.
+- **Optional**: De parameter mag ontbreken. Wanneer de parameter aanwezig is, kan de waarde aanvullend worden gevalideerd. Dit laten we in deze opdracht buiten beschouwing.
 
 4. **Supporting Data**: Niet van toepassing.
 
@@ -87,12 +87,6 @@ Een dataverwerkingspipeline ontwikkelen die inkomende records controleert aan de
 - **Uniqueness**: Detecteren van dubbele events op basis van een geschikte event-ID of combinatie van velden.
 - **Timeliness**: Controleren op ontbrekende, ongeldige of onverwachte tijdstempels.
 - **Pattern validation**: Detecteren van onverwachte eventfrequenties of relaties tussen events en parameters.
-
-Voor de aanwezigheid van event parameters gelden drie niveaus:
-
-**Mandatory**: De parameter moet aanwezig zijn en een niet-lege waarde bevatten. Een overtreding wordt als een blokkerende validatiefout geregistreerd.
-**Expected**: De parameter wordt verwacht, maar het event blijft behouden wanneer de parameter ontbreekt. De afwijking wordt als waarschuwing geregistreerd.
-**Optional**: De parameter hoeft niet aanwezig te zijn. Wanneer deze wel aanwezig is, wordt de waarde gecontroleerd op eventuele aanvullende validatievoorwaarden.
 
 De pipeline legt validatieresultaten en diagnostische informatie vast. Ook wordt onderzocht in welke fase van de dataketen de verschillende controles het beste kunnen plaatsvinden: tijdens ingestion, gedurende transformaties of via monitoring achteraf.
 
