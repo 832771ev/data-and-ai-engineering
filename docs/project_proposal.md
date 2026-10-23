@@ -24,7 +24,7 @@ List the data sources you plan to use:
 1. **Primary Source**:
 Online bezoekersdata die via Tealium Tag Management wordt verzameld en via Tealium EventStream wordt doorgestuurd naar het Marketing Data Platform in Azure. Voorbeelden zijn onder andere page_view (paginaweergave), calculation_start (starten van een premieberekening), calculation_complete (afronden van een premieberekening) en purchase (afsluiten van een product/polis). Relevante velden hierin zijn: event name, business line, product name, URL, visitor ID, session ID en event specifieke parameters.
 
-2. **Secondary Source**: [e.g., External market data API]
+2. **Secondary Source**:
 Een CSV-bestand met een overzicht van de verschillende KPI-events die binnen a.s.r. worden gehanteerd, inclusief de mogelijke parameters per event. Dit bestand dient als referentie voor de validatieregels van het prototype. Voor iedere parameter is vastgelegd welke aanwezigheidseis van toepassing is:
 
 - **Mandatory**: De parameter moet aanwezig zijn en een niet-lege waarde bevatten. Wanneer niet aan deze eis wordt voldaan, wordt het event als ongeldig aangemerkt.
