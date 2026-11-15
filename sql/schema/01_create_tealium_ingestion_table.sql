@@ -1,5 +1,5 @@
 -- Create customers table
-CREATE TABLE customers (
+CREATE TABLE tealium_ingestion (
     customer_id BIGINT PRIMARY KEY,
     first_name VARCHAR(100),
     last_name VARCHAR(100),
@@ -8,3 +8,8 @@ CREATE TABLE customers (
     country VARCHAR(100),
     age_group VARCHAR(10)
 );
+
+-- Add foreign key
+ALTER TABLE tealium_ingestion 
+ADD CONSTRAINT fk_transactions_customer 
+FOREIGN KEY (customer_id) REFERENCES customers(customer_id);

@@ -1,5 +1,5 @@
 -- Create transactions table
-CREATE TABLE transactions (
+CREATE TABLE event_check (
     transaction_id VARCHAR(50) PRIMARY KEY,
     customer_id BIGINT NOT NULL,
     product_id VARCHAR(50),
@@ -10,7 +10,3 @@ CREATE TABLE transactions (
     payment_method VARCHAR(50)
 );
 
--- Add foreign key
-ALTER TABLE transactions 
-ADD CONSTRAINT fk_transactions_customer 
-FOREIGN KEY (customer_id) REFERENCES customers(customer_id);

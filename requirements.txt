@@ -1,2 +1,5 @@
-pandas==2.3.2
-numpy==2.3.2
+pandas==3.1.0                # inlezen, opschonen en aggregeren van eventdata
+numpy==2.5.4                 # numerieke berekeningen (basis voor pandas en statsmodels)
+pandera[pandas]==0.36.0      # schema-validatie: verplichte parameters, types en toegestane waarden per event
+statsmodels==0.15.0          # anomaliedetectie op eventaantallen met dag-/weekpatronen (STL)
+anthropic==2.3.0             # Claude API: uitleg bij gevonden afwijkingen in de alert-mail
